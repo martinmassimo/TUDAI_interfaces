@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css"/>
+	<title>Paint Pro</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">Paint Pro</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lienzo
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<input type="file" class="custom-file-input" id="cargarfoto">
+						<label class="custom-file-label" for="foto">Subir foto</label>
+						<button class="dropdown-item" id="blanco">Borrar lienzo</button>
+						<button class="dropdown-item" id="descargar">Descargar imagen</button>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Filtros
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<button class="dropdown-item" id="sepia">Sepia</button>
+						<button class="dropdown-item" id="binarizacion">Binarización</button>
+						<button class="dropdown-item" id="negativo">Negativo</button>
+						<button class="dropdown-item" id="brillo">Brillo</button>
+						<button class="dropdown-item" id="saturacion">Saturación, Suavizado</button>
+						<button class="dropdown-item" id="bordes">Detección de Bordes, Blur</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="d-flex justify-content-center">
+		<div class="card">
+			<div class="card-header">
+				Este es tu espacio de trabajo
+			</div>
+			<div class="card-body text-center">
+				<h5 class="card-title">Seleccioná tu herramienta para comenzar!</h5>
+				<div class="row">
+					<div class="col m-2">
+						  <button id="goma">Goma de borrar</button>
+						  <input id="grosorgoma" type="range" name="grosorgoma" id="grosorgoma" min="1" max="50" value="25">
+						</div>
+						<div class="col m-2">
+						<button id="lapiz">Lápiz</button>
+						<input type="color" name="colorlapiz" id="colorlapiz">
+						<input type="range" name="grosorlapiz" id="grosorlapiz" min="1" max="50" value="3">
+				  </div>
+				</div>
+			<canvas id="myCanvas" width="900" height="450"></canvas>
+			</div>
+		  </div>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>
