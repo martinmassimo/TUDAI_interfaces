@@ -9,7 +9,7 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
 	<title>Paint Pro</title>
 </head>
 
@@ -44,12 +44,13 @@
 						Filtros
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<button class="dropdown-item" id="original">Original</button>
 						<button class="dropdown-item" id="sepia">Sepia</button>
-						<button class="dropdown-item" id="binarizacion">Binarización</button>
+						<button class="dropdown-item" id="escalaGrises">Escala de Grises</button>
 						<button class="dropdown-item" id="negativo">Negativo</button>
-						<button class="dropdown-item" id="brillo">Brillo</button>
+						<button class="dropdown-item" id="blur">Blur</button>
+						<button class="dropdown-item" id="bordes">Detección de Bordes</button>
 						<button class="dropdown-item" id="saturacion">Saturación, Suavizado</button>
-						<button class="dropdown-item" id="bordes">Detección de Bordes, Blur</button>
 					</div>
 				</li>
 			</ul>
@@ -66,13 +67,27 @@
 					<div class="col m-2">
 						  <button id="goma">Goma de borrar</button>
 						  <input id="grosorgoma" type="range" name="grosorgoma" id="grosorgoma" min="1" max="50" value="25">
-						</div>
-						<div class="col m-2">
+					</div>
+					<div class="col m-2">
 						<button id="lapiz">Lápiz</button>
 						<input type="color" name="colorlapiz" id="colorlapiz">
 						<input type="range" name="grosorlapiz" id="grosorlapiz" min="1" max="50" value="3">
-				  </div>
+					</div>
 				</div>
+				<h5 class="card-title">Ajustes de imagen</h5>
+				<div class="row">
+					<div class="col m-2">
+						<h7 class="card-title">Brillo</h7>
+						<input type="range" id="brillo" min="-100" max="100" value="0"/>
+					</div>
+					<div class="col m-2">
+					
+					</div>
+				</div>
+
+
+
+
 			<canvas id="myCanvas" width="900" height="450"></canvas>
 			</div>
 		  </div>
@@ -89,7 +104,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
 		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
 		crossorigin="anonymous"></script>
-	<script src="main.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>
