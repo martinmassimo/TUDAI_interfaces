@@ -41,4 +41,9 @@ class Jugador {
     esSuFicha(ficha){
         return this.fichas.includes(ficha);
     }
+    drawFichas(){
+        this.fichas.forEach(ficha =>
+            ficha.dibujarse()
+            )
+    }
 }
