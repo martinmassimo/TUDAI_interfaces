@@ -12,14 +12,18 @@ class Juego{
         this.jugador2 = null;
         this.totalTime = null;
         this.isMouseDown = false;
-        
+        this.correccion = canvas.getBoundingClientRect();
     }
     // Inicializa variables e invoca metodos de crear fichas y renderizar (fichas y tablero)
     // para comenzar el juego
     startGame(){
         this.tablero = new Tablero(this.context,this.radioFicha);;
-        this.jugador1 = new Jugador('#4CAF50');
-        this.jugador2 = new Jugador('#FFEB3B');
+        let player1name = document.querySelector("#player1name").value
+        let player2name = document.querySelector("#player2name").value;
+        (player1name != '') ? this.jugador1 = new Jugador('#4CAF50',player1name) : this.jugador1 = new Jugador('#4CAF50','Jugador 1');
+        (player1name != '') ? this.jugador2 = new Jugador('#FFEB3B',player2name) : this.jugador2 = new Jugador('#FFEB3B','Jugador 2');
+        document.querySelector("#displayNamePlayer1").innerHTML = this.jugador1.nombre;
+        document.querySelector("#displayNamePlayer2").innerHTML = this.jugador2.nombre;
         this.jugadores = []
         this.jugadores.push(this.jugador1);
         this.jugadores.push(this.jugador2);
@@ -53,9 +57,6 @@ class Juego{
         document.querySelector("#player1").classList.toggle('invisible');
         this.jugadorTurno = jugador
     }
-    haveWinner(){
-        
-    }
     // Renderiza las fichas (método local) y el tablero
     draw(){
         this.dibujarFichas();
@@ -81,7 +82,7 @@ class Juego{
             this.utimaFichaClickeada = null;
         }
     
-        let fichaClickeada = this.findClickedFicha(event.layerX, event.layerY);
+        let fichaClickeada = this.findClickedFicha(event.clientX - this.correccion.left, event.clientY-this.correccion.top + $(window).scrollTop());
         if (fichaClickeada != null) {
             fichaClickeada.setHighlithed(true);
             this.utimaFichaClickeada = fichaClickeada;
@@ -101,15 +102,15 @@ class Juego{
     }
     onMouseMoved(event) {        
         if (this.isMouseDown && this.utimaFichaClickeada != null) {
-            this.utimaFichaClickeada.setPosition(event.layerX, event.layerY);
+            this.utimaFichaClickeada.setPosition(event.clientX - this.correccion.left, event.clientY-this.correccion.top + $(window).scrollTop());
             this.draw();
         }
     }
     onMouseUp(event) {
         this.isMouseDown = false;
 
-        if ((this.turnoValido())&&(this.movimientoValido(event.layerX,event.layerY))){
-            let column = this.tablero.getColumnSelected(event.layerX)
+        if ((this.turnoValido())&&(this.movimientoValido(event.clientX - this.correccion.left,event.clientY-this.correccion.top + $(window).scrollTop()))){
+            let column = this.tablero.getColumnSelected(event.clientX - this.correccion.left)
             this.tablero.movimientoFicha(this.utimaFichaClickeada,column);
             
             if (!this.tablero.isWinner(this.jugadorTurno,this.utimaFichaClickeada,column)){
@@ -119,7 +120,7 @@ class Juego{
             else {
                 document.querySelector("#winner").classList.toggle('invisible');
                 document.querySelector("#timmer").classList.toggle('invisible');
-                document.querySelector("#jugador").innerHTML = this.jugadores.indexOf(this.jugadorTurno)+1;
+                document.querySelector("#winnerName").innerHTML = this.jugadorTurno.nombre;
                 this.draw();
                 return true;
             }

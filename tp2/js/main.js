@@ -4,10 +4,14 @@ window.addEventListener("load",() => {
     const canvas = document.querySelector("#myCanvas");
     const context = canvas.getContext("2d");    
     let juego = new Juego (canvas,context)
+    $("#myModal").modal('show');
+    document.querySelector("#play").addEventListener("click",start);
     // Inicialización del Juego, invoca los listener sobre el canvas y activa el temporizador
-    juego.startGame();
-    addEventListeners();
-    updateClock();
+    function start(){
+        juego.startGame();
+        addEventListeners();
+        updateClock();
+    }
     // Reinicia y sobreescribe variables para reiniciar el juego, oculta ganador y hace visible el timmer nuevamente
     function restartGame(){
             juego.startGame();

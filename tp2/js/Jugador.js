@@ -1,7 +1,7 @@
 class Jugador {
-    constructor (color){
+    constructor (color,nombre){
         this.color= color;
-        // this.nombre = nombre;
+        this.nombre = nombre;
         this.turno = false;
         this.fichas = [];
     }

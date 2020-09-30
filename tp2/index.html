@@ -17,24 +17,24 @@
 	<div class="d-flex justify-content-center">
 		<div class="card">
 			<div class="h1 card-header text-center">
-				¡4 en línea! <h2 class="card-title">Comenzá a jugar cuando quieras!</h2>
+				- 4 en línea - <h2 class="card-title">Conectá cuatro fichas en una columna, fila o diagonal para ganar!</h2>
 			</div>
 			<div class="card-body text-center">
 				<button id="restart" type="button" class="btn btn-primary">Reiniciar Juego</button>
 				<div class="row">
 					<div class="col mt-2">
-						<h4>Jugador 1 <span id="player1" class="badge badge-primary">Es tu turno</span></h4>
+						<h2 id="displayNamePlayer1">Jugador 1 </h4><span id="player1" class="badge badge-primary display-2">Es tu turno</span>
 						<!-- <button id="goma">Empezar</button> -->
 					</div>
 					<div class="col mt-2">
-						<h4>Jugador 2 <span id="player2" class="badge badge-primary invisible">Es tu turno</span></h4>
+						<h2 id="displayNamePlayer2">Jugador 2 </h4><span id="player2" class="badge badge-primary invisible">Es tu turno</span>
 						<!-- <button id="lapiz">Tiem</button> -->
 					</div>
 				</div>
 				<div class="row">
 					<div class="col mt">
 						<h2 id="timmer" class="text-center">Te quedán <span id="countDown"></span> segundos para colocar una ficha!</h2>
-						<h2 id="winner" class="text-center invisible">¡Ganador el Jugador <span id="jugador"></span>!</h2>
+						<h2 id="winner" class="text-center invisible">¡Felicitaciones <span id="winnerName"></span>, ganaste!</h2>
 					</div>
 				</div>
 				<canvas id="myCanvas" width="1000" height="600"></canvas>
@@ -42,16 +42,13 @@
 		  </div>
 	</div>
 	<!-- Button trigger modal -->
-	<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-		Launch demo modal
-	</button> -->
-	
+	<!-- <button type="button" data-toggle="modal" data-target="#myModal">Ingresá los nombres de los jugadores</button>	 -->
 	<!-- Modal -->
-	<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-			<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+			<h5 class="modal-title" id="exampleModalLabel">Ingresá los nombres de los jugadores</h5>
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 			</button>
@@ -60,21 +57,20 @@
 				<form>
 					<div class="form-group row">
 						<div class="col-sm-10">
-							<input class="form-control" type="text" placeholder="Nombre Jugador 1"/>
+							<input class="form-control" type="text" id="player1name" placeholder="Nombre del jugador 1"/>
 						</div>
 						<div class="col-sm-10">
-							<input class="form-control" type="text" placeholder="Nombre Jugador 2"/>
+							<input class="form-control" type="text" id="player2name" placeholder="Nombre del jugador 2"/>
 						</div>
 					</div>
 				</form>
 			</div>
 			<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-			<button type="button" class="btn btn-primary">Jugar</button>
+			<button type="button" id="play" class="btn btn-primary" data-dismiss="modal">Jugar</button>
 			</div>
 		</div>
 		</div>
-	</div> -->
+	</div>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
