@@ -107,6 +107,7 @@ nav ul li:hover a{
 	top: 50%;
 	width: 100px;
 	height: 100px;
+    animation: aparecer 5s ease-in;
 }
 #capa1{
     background-color: transparent;
