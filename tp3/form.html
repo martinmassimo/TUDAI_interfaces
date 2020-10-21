@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pelicula</title>
+	<script src="js/main.js"></script>
+	<script src="js/form.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="hidden">
+		<nav>
+		   	<ul id="menu">☰
+			 <li><a href="index.html">Inicio</a></li>
+			 <li><a href='calendar.html'>Calendario</a></li>
+			 <li><a href='form.html'>Contacto</a></li>
+			 <li><a href='#'>Universal Studios</a></li>
+			 <li><a href='#'>Links relacionados</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section id="loader"></section>
+	<section class="hidden" id="conteiner">
+		<div>	
+			<h1>Formulario de comentarios</h1>
+			<p>Hacenos llegar tus comentarios y saludos a los protagonistas completando el siguiente formulario:</p>
+		</div>
+		<div id="form">
+			<form action="">
+				<label for="name">Nombre:</label><input type="text" name="nombre" id="nombre">
+				<label for="apellido">Apellido:</label><input type="text" name="apellido" id="apellido">
+				<label for="email">Email:</label><input type="text" name="email" id="email">
+				<label for="telefono">Teléfono:</label><input type="number" name="telefono" id="telefono">
+				<label for="name">Comentarios:</label><input type="text" name="comentarios" id="comentarios">
+				<button id="enviar" type="submit">Enviar</button>
+			</form>	
+		</div>
+	</section>
+	<footer>
+		Resolución recomendada: 
+	</footer>
+</body>
+</html>
