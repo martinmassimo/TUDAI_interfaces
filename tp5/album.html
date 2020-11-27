@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SpoilerFive - La mejor app de música de la Argentina</title>
+	<script src="js/main.js"></script>
+	<script src="js/album.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<section id="headerLogo">
+			<a href="index.html"><img src="img/SpoilerFive.png"></a>
+		</section>
+		<section id="headerBuscar">
+			<div><input type="text" placeholder="Buscar"></div>
+			<div><a href="search.html"><img src="img/search.png"></a></div>
+		</section>
+		<section id="headerNav">
+			<a href="account.html"><img src="img/account.png"></a>
+			<a href='faq.html'><img src="img/faq.png"></a>
+			<a href='config.html'><img src="img/config.png"></a>
+		</section>
+	</header>
+	<section id="library">
+		<div>
+			<h1>Mi biblioteca</h1>
+		</div>
+		<div>
+			<p>Mis listas de reproducción</p>
+		</div>
+		<div>
+			<p>Albums favoritos</p>
+		</div>
+		<div>
+			<p>Lo que más escuchaste</p>
+		</div>	
+		<div>
+			<p>Recomendado para vos</p>
+		</div>
+		<div>
+			<p>Podcasts favoritos</p>
+		</div>
+		<div>
+			<p>Canciones favoritas</p>
+		</div>
+	</section>
+	<section id="conteiner">
+		<div class="title">
+			<div id="back"><img src="img/back.png"></div>
+			<div class="titleComplete">
+				<div class="title">The Best of Nirvana</div>
+				<div class="subtitle">Lista de reproducción</div>
+			</div>
+		</div>
+		<div class="encabezadoAlbum">
+			<div class="albumDatos">
+				<div class="album">
+					<img src="img/album01.png">
+				</div>
+				<div>
+					<div class="artistaButtom" class="subtitle"> Nirvana</div>
+					<div class="title">The Best of Nirvana</div>
+					<div class="subtitle">Escuchado 20K veces</div>
+					<div class="stars">
+						<img src="img/starV.png">
+						<img src="img/starV.png">
+						<img src="img/starV.png">
+						<img src="img/star.png">
+						<img src="img/star.png">
+					</div>
+				</div>
+			</div>
+			<div class="ultimasVotaciones">
+				<div class="subtitle">Mariana G. votó  
+					<div class="stars">
+						<img src="img/starV.png">
+						<img src="img/starV.png">
+						<img src="img/starV.png">
+						<img src="img/star.png">
+						<img src="img/star.png">
+					</div>
+				hace 5 segundos.</div>
+				<div class="subtitle">Lucas P. votó  
+					<div class="stars">
+						<img src="img/starV.png">
+						<img src="img/starV.png">
+						<img src="img/star.png">
+						<img src="img/star.png">
+						<img src="img/star.png">
+					</div>
+				hace 15 segundos.</div>
+			</div>
+			<div class="albumInteraccion">
+				<div class="albumButtom verde"><h1>Reproducir  <img src="img/play.png"></h1></div>
+				<div class="albumButtom"><h1>Agregar a favoritos  <img src="img/favorite.png"></h1></div>
+				<div class="albumButtom" id="BtnModal"><h1>Calificar  <img src="img/star.png"></h1></div>
+			</div>
+		</div>
+		<div class="listado">
+			<div class="title"><input type="text" placeholder="Filtrar"></div>
+			<table>
+				<tr>
+					<th></th>
+					<th class="sub">Canción</th>
+					<th class="sub">Album</th>
+					<th class="sub">Artista</th>
+					<th class="sub">Duración</th>
+					<th></th>
+				</tr>
+				<tr>
+					<td><img src="img/play.png"></td>
+					<td class="item">Blew</td>
+					<td class="item">Bleach</td>
+					<td class="item"><a href="artista.html">Nirvana</a></td>
+					<td class="item">2:22</td>
+					<td class="item">...</td>
+				</tr>
+				<tr>
+					<td><img src="img/play.png"></td>
+					<td class="item">Something in the way</td>
+					<td class="item">Nervermind</td>
+					<td class="item"><a href="artista.html">Nirvana</a></td>
+					<td class="item">3:12</td>
+					<td class="item">...</td>
+				</tr>
+				<tr>
+					<td><img src="img/play.png"></td>
+					<td class="item">Lithium</td>
+					<td class="item">Nervermind</td>
+					<td class="item"><a href="artista.html">Nirvana</a></td>
+					<td class="item">1:55</td>
+					<td class="item">...</td>
+				</tr>
+				<tr>
+					<td><img src="img/play.png"></td>
+					<td class="item">Smells like teen spirit</td>
+					<td class="item">Nervermind</td>
+					<td class="item"><a href="artista.html">Nirvana</a></td>
+					<td class="item">3:54</td>
+					<td class="item">...</td>
+				</tr>
+				<tr>
+					<td><img src="img/play.png"></td>
+					<td class="item">Heart-shaped box</td>
+					<td class="item">In Utero</td>
+					<td class="item"><a href="artista.html">Nirvana</a></td>
+					<td class="item">3:22</td>
+					<td class="item">...</td>
+				</tr>
+				<tr>
+					<td><img src="img/play.png"></td>
+					<td class="item">Come as you are</td>
+					<td class="item">Nervermind</td>
+					<td class="item"><a href="artista.html">Nirvana</a></td>
+					<td class="item">3:39</td>
+					<td class="item">...</td>
+				</tr>
+				<tr>
+					<td><img src="img/play.png"></td>
+					<td class="item">All apologies</td>
+					<td class="item">In Utero</td>
+					<td class="item"><a href="artista.html">Nirvana</a></td>
+					<td class="item">3:53</td>
+					<td class="item">...</td>
+				</tr>
+				<tr>
+					<td><img src="img/play.png"></td>
+					<td class="item">The man who sold the world</td>
+					<td class="item">MTV Unplugged</td>
+					<td class="item"><a href="artista.html">Nirvana</a></td>
+					<td class="item">4:21</td>
+					<td class="item">...</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<div>
+				<div id="modalStars"><img src="img/star.png"></div>
+				<div id="modalStars"><img src="img/star.png"></div>
+				<div id="modalStars"><img src="img/star.png"></div>
+				<div id="modalStars"><img src="img/star.png"></div>
+				<div id="modalStars"><img src="img/star.png"></div>
+			</div>
+		  </div>
+		
+	</div>
+	<footer>
+		<section id="player">
+			<div class="album">
+				<div>
+					<img src="img/album01.png">
+				</div>
+				<div class="albumData">
+					<div class="albumName">Blew</div>
+					<div class="albumArtist">Nirvana</div>
+				</div>
+			</div>
+			<div class="playerButtoms">
+				<div class="progress">
+					<p>1:23</p> 
+					<img src="img/progress.png"> 
+					<p>2:23</p> 
+				</div>
+				<div>
+					<img src="img/repeat.png">
+					<img src="img/previus.png">
+					<img src="img/play.png">
+					<img src="img/next.png">
+					<img src="img/volume.png">
+				</div>
+			</div>
+			<div class="stars">
+				<img src="img/star.png">
+				<img src="img/star.png">
+				<img src="img/star.png">
+				<img src="img/star.png">
+				<img src="img/star.png">
+				<img src="img/up.png">
+			</div>
+		</section>
+		<!-- Resolución recomendada: 1536x722 (windows con resolución de pantalla en 1920x1080 y cambiar el tamaño de los elementos a 125%) -->
+	</footer>
+</body>
+</html>
